@@ -1,0 +1,13 @@
+.btn.btn-success {
+    background-color: #019875 !important;
+    margin-top: 15px;
+}
+
+input.form-control {
+    width: 230px;
+    margin-top: 4px;
+}
+
+.btn.btn-success:hover {
+    background-color: #28624a !important;
+}

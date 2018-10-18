@@ -1,0 +1,32 @@
+<a style="cursor: pointer;" [routerLink]="[index]" routerLinkActive="active" class="list-group-item clearfix">
+
+    <table id="mytable" class="table table-bordred table-striped">
+        <thead>
+            <th>NAME</th>
+            <th>SURNAME</th>
+            <th>PERSONAL IDENT. NUMBER</th>
+            <th>BIRTH PLACE</th>
+            <th>BIRTH DATE</th>
+            <th>HEIGHT</th>
+            <th>WEIGHT</th>
+            <!-- <th>BMI</th> -->
+            <th>BLOOD TYPE</th>
+            <th>CHOSEN DOCTOR</th>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>{{patients.name}}</td>
+                <td>{{patients.surname}}</td>
+                <td>{{patients.lbo}}</td>
+                <td>{{patients.birthPlace}}</td>
+                <td>{{patients.birthDate}}</td>
+                <td>{{patients.height}}</td>
+                <td>{{patients.weight}}</td>
+                <!-- <td>{{patients.getBmi()}}</td> -->
+                <td>{{patients.bloodType}}</td>
+                <td>{{patients.chosenDoctor}}</td>
+            </tr>
+        </tbody>
+
+    </table>

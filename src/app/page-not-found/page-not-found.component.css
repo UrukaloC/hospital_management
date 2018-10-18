@@ -1,0 +1,7 @@
+.login-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(45deg, rgba(0, 103, 255, 0.2), rgba(0, 150, 80, 0.5)), url('../../assets/images/error.jpg') center center no-repeat;
+    background-size: cover;
+}

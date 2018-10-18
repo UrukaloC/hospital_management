@@ -1,0 +1,9 @@
+<a style="cursor: pointer;" [routerLink]="[index]" routerLinkActive="active" class="list-group-item clearfix">
+    <div class="pull-left">
+        <p>Name and Surname: {{doctors.name | uppercase}}, {{doctors.surname | uppercase}}</p>
+        <p>Personal identification number: {{doctors.lbo}}</p>
+        <p>Place of birth: {{doctors.birthPlace | uppercase}}</p>
+        <p>Date of birth: {{doctors.birthDate}}</p>
+        <p>Medicine post: {{doctors.position}}</p>
+    </div>
+</a>

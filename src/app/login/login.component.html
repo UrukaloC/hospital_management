@@ -1,0 +1,44 @@
+<ngb-alert [type]="'success'" (close)="userRegistered = false" class="login-success-alert" *ngIf="userRegistered">
+    You have successfully registered!
+</ngb-alert>
+<ngb-alert [type]="'danger'" (close)="errorMessage.isMessageShown = false" *ngIf="errorMessage.isMessageShown">
+    {{ errorMessage.message }}
+</ngb-alert>
+<div class="login-container">
+    <div class="row">
+        <form (ngSubmit)="performLogin()" id="login-form" class="col-md-4 offset-md-4">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <i class="fas fa-briefcase-medical" style="text-align: center"></i>
+                </div>
+                <!-- Email Address Input -->
+                <div class="form-group col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fas fa-envelope-open"></i>
+                            </div>
+                        </div>
+                        <input id="email-address" name="email" type="email" class="form-control" placeholder="Email address..." [(ngModel)]="email">
+                    </div>
+                </div>
+                <!-- Password Input -->
+                <div class="form-group col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fas fa-unlock"></i>
+                            </div>
+                        </div>
+                        <input id="password" name="password" type="password" class="form-control" placeholder="Password..." [(ngModel)]="password">
+                    </div>
+                </div>
+                <!-- Submit -->
+                <div class="form-group col-md-12">
+                    <!-- Dodata putanja ka stranici sa detaljima pacijenta -->
+                    <button type="submit" class="btn btn-light">Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

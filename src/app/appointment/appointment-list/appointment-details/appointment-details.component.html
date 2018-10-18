@@ -1,0 +1,24 @@
+<a style="cursor: pointer;" [routerLink]="[index]" routerLinkActive="active" class="list-group-item clearfix">
+
+    <table id="mytable" class="table table-bordred table-striped">
+        <thead>
+            <th>NAME</th>
+            <th>SURNAME</th>
+            <th>DATE</th>
+            <th>DOCTOR</th>
+            <th class="diagnosis">DIAGNOSIS</th>
+            <!-- <th>BMI</th> -->
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>{{appointments.name}}</td>
+                <td>{{appointments.surname}}</td>
+                <td>{{appointments.date}}</td>
+                <td>{{appointments.doctorName}}</td>
+                <td>{{appointments.diagnosis}}</td>
+                <!-- <td>{{appointments.getBmi()}}</td> -->
+            </tr>
+        </tbody>
+
+    </table>

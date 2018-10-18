@@ -1,0 +1,51 @@
+<ngb-alert [type]="'danger'" (close)="errorMessage.isMessageShown = false" *ngIf="errorMessage.isMessageShown">
+    {{ errorMessage.message }}
+</ngb-alert>
+<div class="login-container">
+    <div class="row">
+        <!-- Register Form -->
+        <form id="login-form" #signupForm="ngForm" class="col-md-4 offset-md-4">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <i class="fas fa-notes-medical"></i>
+                </div>
+                <!-- Username -->
+                <div class="form-group col-lg-6 col-md-12">
+                    <input id="username" [(ngModel)]="userToCreate.username" minlength="3" required name="username" class="form-control {{ applyValidationClass(username) }}" type="text" placeholder="Choose your display name..." #username="ngModel" autofocus>
+                    <div class="invalid-feedback" *ngIf="isInputInvalid(username)">
+                        <p class="error-message" *ngIf="hasError(username, 'required')">Username is required</p>
+                        <p class="error-message" *ngIf="hasError(username, 'minlength')">Username must contain minimum 3 characters</p>
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="form-group col-lg-6 col-md-12">
+                    <input id="email-address" [(ngModel)]="userToCreate.email" email required class="form-control {{ applyValidationClass(email) }}" name="email" type="email" placeholder="Email address..." #email="ngModel">
+                    <div class="invalid-feedback" *ngIf="isInputInvalid(email)">
+                        <p class="error-message" *ngIf="hasError(email, 'required')">Email is required</p>
+                        <p class="error-message" *ngIf="hasError(email, 'email')">Email format is invalid</p>
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="form-group col-md-12">
+                    <input id="password" [(ngModel)]="userToCreate.password" minlength="6" required [appStringsAreEquals]="confirmPasswordInput" [isReverseField]="true" class="form-control {{ applyValidationClass(password) }}" name="password" type="password" placeholder="Account password..."
+                        #password="ngModel">
+                    <div class="invalid-feedback" *ngIf="isInputInvalid(password)">
+                        <p class="error-message" *ngIf="hasError(password, 'required')">Password is required</p>
+                        <p class="error-message" *ngIf="hasError(password, 'minlength')">Password must contain minimum 6 characters</p>
+                    </div>
+                </div>
+                <!-- Confirm Password -->
+                <div class="form-group col-md-12">
+                    <input id="confirm-password" [(ngModel)]="confirmPassword" required [appStringsAreEquals]="password" class="form-control {{ applyValidationClass(confirmPasswordInput) }}" name="confirmPassword" type="password" placeholder="Repeat your password..." #confirmPasswordInput="ngModel">
+                    <div class="invalid-feedback" *ngIf="isInputInvalid(confirmPasswordInput)">
+                        <p class="error-message" *ngIf="hasError(confirmPasswordInput, 'strNotEqual')">Passwords do not match</p>
+                        <p class="error-message" *ngIf="hasError(confirmPasswordInput, 'required')">Password Confirm is required</p>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <button (click)="signUp(signupForm)" type="button" class="btn btn-light" [disabled]="!signupForm.form.valid">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

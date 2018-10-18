@@ -1,0 +1,18 @@
+.btn.btn-primary {
+    margin-right: 15px;
+    border-radius: 4px !important;
+    background-color: #007bff;
+}
+
+.wrap {
+    background-color: #E4F1FE;
+    color: #000;
+    border-radius: 4px;
+    width: 316px;
+    margin-top: -21px;
+}
+
+h1 {
+    margin-left: 10px;
+    padding: 2px;
+}

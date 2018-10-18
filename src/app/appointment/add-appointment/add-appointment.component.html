@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-success" [disabled]="!appointmentForm.valid"><i class="fas fa-save"></i> 
+                        Save</button>
+                    <button type="button" class="btn btn-danger" (click)="onCancel()"><i class="fas fa-ban"></i>
+
+                         Cancel</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="text" id="name" formControlName="name" class="form-control" placeholder="Name...">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="text" id="surname" formControlName="surname" class="form-control" placeholder="Surname...">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="date" id="date" formControlName="date" class="form-control" placeholder="Date...">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="text" id="doctorName" formControlName="doctorName" class="form-control" placeholder="Doctor full name...">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <textarea rows="7" type="text" id="diagnosis" formControlName="diagnosis" class="form-control" placeholder="Diagnosis..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

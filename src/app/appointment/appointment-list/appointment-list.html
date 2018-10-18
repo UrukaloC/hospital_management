@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success" (click)="onNewAppointment()"><i class="fas fa-plus-circle"></i>  Add Appointment</button>
+        <!-- search patient -->
+        <input class="form-control" [(ngModel)]='term' type="text" id="filter" placeholder="Search by surname...">
+
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <app-appointment-details *ngFor="let appointment of appointments | filter:term; let i = index" [appointments]="appointment" [index]="appointment.uid"></app-appointment-details>
+    </div>
+</div>

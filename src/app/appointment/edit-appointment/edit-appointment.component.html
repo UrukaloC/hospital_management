@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xs-12">
+        <!-- selected patient name -->
+        <div class="wrap">
+            <ng-container *ngIf="appointments$ | async as appointments">
+                <h1>{{ appointments.name}}, {{ appointments.surname}}</h1>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group" appDropdown>
+            <button class="btn btn-primary"><a style="cursor: pointer;" (click)="onEditAppointment()"><i class="fas fa-edit"></i>
+                 Update appointment profile</a></button>
+
+            <button class="btn btn-primary"><a style="cursor: pointer;" (click)="onDeleteAppointment()"><i class="fas fa-trash-alt"></i>
+
+                 Delete profile</a></button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xs-12">
+        <!-- ime izabranog doktora za edit -->
+        <div class="wrap">
+            <ng-container *ngIf="doctor$ | async as doctor">
+                <h1>{{ doctor.name}}, {{ doctor.surname}}</h1>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group" appDropdown>
+            <button class="btn btn-primary"><a style="cursor: pointer;" (click)="onEditDoctor()"><i class="fas fa-edit"></i>
+                 Update doctor profile</a></button>
+
+            <button class="btn btn-primary"><a style="cursor: pointer;" (click)="onDeleteDoctor()"><i class="fas fa-trash-alt"></i>
+
+                 Delete profile</a></button>
+        </div>
+    </div>
+</div>

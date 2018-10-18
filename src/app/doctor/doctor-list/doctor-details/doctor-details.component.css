@@ -1,0 +1,13 @@
+.list-group-item:last-child {
+    margin-bottom: 6px;
+}
+
+p {
+    font-weight: 600;
+}
+
+a.list-group-item.active,
+a.list-group-item.active:hover,
+a.list-group-item.active:focus {
+    background-color: #007bff;
+}

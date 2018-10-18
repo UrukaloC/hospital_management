@@ -1,0 +1,86 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-success" [disabled]="!patientForm.valid"><i class="fas fa-save"></i> 
+                        Save</button>
+                    <button type="button" class="btn btn-danger" (click)="onCancel()"><i class="fas fa-ban"></i>
+
+                         Cancel</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="text" id="name" formControlName="name" class="form-control" placeholder="Name...">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="text" id="surname" formControlName="surname" class="form-control" placeholder="Surname...">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="text" id="lbo" formControlName="lbo" class="form-control" placeholder="Personal Identification number...">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="text" id="birthPlace" formControlName="birthPlace" class="form-control" placeholder="Birth place...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+
+                        <input type="text" id="birthDate" formControlName="birthDate" class="form-control" placeholder="Birth date...">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="text" id="height" formControlName="height" class="form-control" placeholder="Height...">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="number" id="weight" formControlName="weight" class="form-control" placeholder="Weight...">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <select class="form-control" formControlName="bloodType">
+                            <option *ngFor="let bloodType of bloodTypes" value="{{ bloodType.returnFullName() }}">{{ bloodType.returnFullName() }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input type="text" id="chosenDoctor" formControlName="chosenDoctor" class="form-control" placeholder="chosenDoctor...">
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>

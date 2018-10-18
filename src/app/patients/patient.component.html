@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- prvi grid sidebar -->
+            <div class="col-sm-2">
+                <div id="wrapper" class="active">
+                    <div id="sidebar-wrapper">
+                        <ul id="sidebar_menu" class="sidebar-nav">
+                            <li class="sidebar-brand"><a id="menu-toggle" active>Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+                        </ul>
+                        <ul class="sidebar-nav" id="sidebar">
+                            <li>
+                                <a class="navbar-brand" routerLink="/homepage">
+                                    <i class="fas fa-home"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <ng-container *ngIf="loggedinUser$ | async as loggedinUser">
+                                    <a class="nav-link">Hello, {{ loggedinUser.username }}</a>
+                                </ng-container>
+                            </li>
+
+                            <li>
+                                <ng-container *ngIf="loggedinUser$ | async as loggedinUser">
+                                    <a class="nav-link" (click)="logout()" routerLink="/login">
+                                                Logout <i class="fas fa-sign-out-alt"></i>
+                                    </a>
+                                </ng-container>
+
+                            </li>
+
+                            <li>
+                                <a class="navbar-brand" routerLink="/patient">
+                                    <i class="fas fa-file-medical"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navbar-brand" routerLink="/doctor">
+                                    <i class="fas fa-user-md"></i>
+                                </a>
+                            </li>
+                            <!-- link appointment -->
+                            <li>
+                                <a class="navbar-brand" routerLink="/appointment">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navbar-brand" (click)='backClicked()'><i class="fas fa-angle-double-left"></i></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- drugi grid -->
+            <div class="col-sm-12">
+                <app-patient-list></app-patient-list>
+            </div>
+            <!-- treci grid -->
+            <div class="col-sm-6">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
