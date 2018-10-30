@@ -13,6 +13,7 @@ import { AngularFireList } from 'angularfire2/database';
   styleUrls: ['./patient-list.component.css']
 })
 export class PatientListComponent implements OnInit, OnDestroy {
+  p;
   term;
   patient: AngularFireList<Patient>;
   patients: Patient[];

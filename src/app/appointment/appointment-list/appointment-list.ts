@@ -13,6 +13,7 @@ import { AppointmentService } from '../appointment.service';
   styleUrls: ['./appointment-list.css']
 })
 export class AppointmentListComponent implements OnInit, OnDestroy {
+  p;
   term;
   appointment: AngularFireList<Appointment>;
   appointments: Appointment[];

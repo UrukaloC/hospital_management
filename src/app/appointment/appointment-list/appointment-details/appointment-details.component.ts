@@ -13,7 +13,6 @@ import { Appointment } from '../../../models/appointment';
 export class AppointmentItemComponent implements OnInit {
   @Input() appointments: Appointment;
   @Input() index: number;
-
   ngOnInit() {
   }
 }
