@@ -23,6 +23,8 @@ export class DoctorService {
 
     addDoctor(newDoctor: Doctor): void {
         newDoctor.uid = uuid();
+        newDoctor.creDate = new Date().toLocaleString();
+
         let fbDoctor = this._db.object('doctors/' + newDoctor.uid).set(newDoctor);    
     }
 

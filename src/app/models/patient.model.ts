@@ -8,13 +8,13 @@ export class Patient extends SystemUser {
     bloodType: string;
     chosenDoctor: string;
     
-    constructor(name, surname, lbo, birthPlace, birthDate, uid, height, weight, bloodType, chosenDoctor){
-        super(name, surname, lbo, birthPlace, birthDate);
+    constructor(name, surname, lbo, birthPlace, birthDate, uid, height, weight, bloodType, chosenDoctor, creDate){
+        super(name, surname, lbo, birthPlace, birthDate, creDate);
         this.uid = uid;
         this.height = height;
         this.weight = weight;
         this.bloodType = bloodType;
-        this.chosenDoctor = chosenDoctor;
+        this.chosenDoctor = chosenDoctor
     }
 
     getBmi(): number {

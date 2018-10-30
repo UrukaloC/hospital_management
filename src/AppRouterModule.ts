@@ -25,8 +25,10 @@ const Hospital: Routes = [
     { path: ':id', component: DoctorDetailComponent },
     { path: ':id/edit', component: DoctorEditComponent },
   ] },
+  
   { path: 'homepage', component: HomePage, canActivate: [ProtectedRouteGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full'},
+
   { path: 'patient', component: PatientComponent, canActivate: [ProtectedRouteGuard], children: [
     { path: 'new', component: PatientEditComponent },
     { path: ':id', component: PatientDetailComponent },

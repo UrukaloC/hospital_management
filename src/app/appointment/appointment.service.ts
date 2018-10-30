@@ -26,6 +26,7 @@ export class AppointmentService {
 
     addAppointment(newAppointment: Appointment): void {
         newAppointment.uid = uuid();
+        newAppointment.creDate = new Date().toLocaleString();
         let fbAppointment = this._db.object('appointments/' + newAppointment.uid).set(newAppointment);    
     }
 

@@ -26,6 +26,8 @@ export class PatientService {
 
     addPatient(newPatient: Patient): void {
         newPatient.uid = uuid();
+        newPatient.creDate = new Date().toLocaleString();
+
         let fbPatient = this._db.object('patients/' + newPatient.uid).set(newPatient);    
     }
 

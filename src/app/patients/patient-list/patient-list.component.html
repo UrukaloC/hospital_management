@@ -9,7 +9,7 @@
 <hr>
 <div class="row">
     <div class="col-xs-12">
-        <app-patient-details *ngFor="let patient of patients | filter:term | paginate: { itemsPerPage: 4, currentPage: p }; let i = index" [patients]="patient" [index]="patient.uid"></app-patient-details>
+        <app-patient-details *ngFor="let patient of patients | sortByDate | filter:term | paginate: { itemsPerPage: 4, currentPage: p }; let i = index" [patients]="patient" [index]="patient.uid"></app-patient-details>
         <pagination-controls (pageChange)="p = $event" class="my-pagination bckg-color"></pagination-controls>
     </div>
 </div>

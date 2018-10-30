@@ -7,14 +7,16 @@ export class Appointment {
     doctorName: string;
     date: string;
     diagnosis: string;
+    creDate: string;
 
-    constructor(uid, name, surname, doctorName, date, diagnosis){
+    constructor(uid, name, surname, doctorName, date, diagnosis, creDate){
         this.uid = uid;
         this.name = name;
         this.surname = surname;
         this.doctorName = doctorName;
         this.date = date;
         this.diagnosis = diagnosis;
+        this.creDate = creDate;
     }
 
     returnDiagnosis(){

@@ -39,6 +39,7 @@ import { AppointmentEditComponent } from './appointment/add-appointment/add-appo
 import { AppointmentService } from './appointment/appointment.service';
 import { AppointmentItemComponent } from './appointment/appointment-list/appointment-details/appointment-details.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { SortByDatePipe } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AppointmentListComponent,
     AppointmentDetailComponent,
     AppointmentEditComponent,
-    AppointmentItemComponent
+    AppointmentItemComponent,
+    SortByDatePipe
 
   ],
   imports: [
