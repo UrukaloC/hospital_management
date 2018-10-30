@@ -34,8 +34,10 @@ export class AppointmentDetailComponent implements OnInit {
   }
 
   onDeleteAppointment() {
+    if (confirm('Are you sure to delete this record ?') === true) {
     this.appointmentService.deleteAppointment(this.id);
     this.router.navigate(['/appointment']);
   }
+}
 
 }

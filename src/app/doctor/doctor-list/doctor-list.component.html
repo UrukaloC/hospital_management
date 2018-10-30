@@ -9,6 +9,8 @@
 <hr>
 <div class="row">
     <div class="col-xs-12">
-        <app-doctor-details *ngFor="let doctor of doctors | filter:term; let i = index" [doctors]="doctor" [index]="doctor.uid"></app-doctor-details>
+        <app-doctor-details *ngFor="let doctor of doctors | filter:term | paginate: { itemsPerPage: 3, currentPage: p }; let i = index" [doctors]="doctor" [index]="doctor.uid"></app-doctor-details>
+        <pagination-controls (pageChange)="p = $event" class="my-pagination bckg-color"></pagination-controls>
+
     </div>
 </div>

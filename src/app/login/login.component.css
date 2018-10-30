@@ -65,3 +65,12 @@
 .form-group.col-md-12 {
     text-align: center;
 }
+
+.link-reg {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.svg-inline--fa {
+    margin-right: 6px;
+}

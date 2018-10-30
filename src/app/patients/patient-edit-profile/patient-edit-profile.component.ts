@@ -34,8 +34,10 @@ export class PatientDetailComponent implements OnInit {
   }
 
   onDeletePatient() {
+    if (confirm('Are you sure to delete this record ?') === true) {
     this.patientService.deletePatient(this.id);
     this.router.navigate(['/patient']);
   }
+}
 
 }

@@ -34,6 +34,8 @@ export class DoctorDetailComponent implements OnInit {
   }
 
   onDeleteDoctor() {
+    if (confirm('Are you sure to delete this record ?') === true) {
     this.doctorService.deleteDoctor(this.id);
   }
+}
 }

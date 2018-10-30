@@ -16,7 +16,7 @@ import { AppRouterModule } from '../AppRouterModule';
 import { AuthenticationService } from './services/authentication.service';
 import { UserService } from './services/user.service';
 import { environment } from '../environments/environment';
-import { IsUserAuthenticatedGuard } from './security/is-user-authenticated.guard';
+import { ProtectedRouteGuard } from './security/protected-route-guard.guard';
 import { StringsAreEqualsValidatorDirective } from './validators/strings-are-equals-validator.directive';
 import { HomePage } from './homepage/home-page.component';
 import { DoctorService } from './doctor/doctor.service';
@@ -38,6 +38,7 @@ import { AppointmentDetailComponent } from './appointment/edit-appointment/edit-
 import { AppointmentEditComponent } from './appointment/add-appointment/add-appointment.component';
 import { AppointmentService } from './appointment/appointment.service';
 import { AppointmentItemComponent } from './appointment/appointment-list/appointment-details/appointment-details.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { AppointmentItemComponent } from './appointment/appointment-list/appoint
 
   ],
   imports: [
+    NgxPaginationModule,
     BrowserModule,
     FormsModule,
     NgbModule.forRoot(),
@@ -75,7 +77,7 @@ import { AppointmentItemComponent } from './appointment/appointment-list/appoint
     AngularFireDatabaseModule,
     ReactiveFormsModule,
   ],
-  providers: [AuthenticationService, UserService, IsUserAuthenticatedGuard, DoctorService, PatientService, BloodTypeService, AppointmentService],
+  providers: [AuthenticationService, UserService, ProtectedRouteGuard, DoctorService, PatientService, BloodTypeService, AppointmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

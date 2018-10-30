@@ -46,6 +46,10 @@
                     <button (click)="signUp(signupForm)" type="button" class="btn btn-light" [disabled]="!signupForm.form.valid">Sign Up</button>
                 </div>
             </div>
+            <div class="link-log">
+                <a class="route-to-login" routerLink="/login">
+                    <i class="fas fa-sign-in-alt"></i> If you already have an accout please login</a>
+            </div>
         </form>
     </div>
 </div>

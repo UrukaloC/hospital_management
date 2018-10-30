@@ -1,4 +1,4 @@
-<a style="cursor: pointer;" [routerLink]="[index]" routerLinkActive="active" class="list-group-item clearfix">
+<!-- <a style="cursor: pointer;" [routerLink]="[index]" routerLinkActive="active" class="list-group-item clearfix">
 
     <table id="mytable" class="table table-bordred table-striped">
         <thead>
@@ -7,18 +7,39 @@
             <th>DATE</th>
             <th>DOCTOR</th>
             <th class="diagnosis">DIAGNOSIS</th>
-            <!-- <th>BMI</th> -->
+            <th>BMI</th>
+        </thead>
+    </table>
+    <tbody>
+
+        <tr>
+            <td>{{appointments.name}}</td>
+            <td>{{appointments.surname}}</td>
+            <td>{{appointments.date}}</td>
+            <td>{{appointments.doctorName}}</td>
+            <td>{{appointments.diagnosis}}</td>
+            <td>{{appointments.getBmi()}}</td>
+        </tr>
+    </tbody> -->
+<a style="cursor: pointer;" [routerLink]="[index]" routerLinkActive="active" class="list-group-item clearfix">
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">NAME</th>
+                <th scope="col">SURNAME</th>
+                <th scope="col">DATE</th>
+                <th scope="col">DOCTOR</th>
+                <th scope="col" class="diagnosis">DIAGNOSIS</th>
+            </tr>
         </thead>
         <tbody>
-
             <tr>
                 <td>{{appointments.name}}</td>
                 <td>{{appointments.surname}}</td>
                 <td>{{appointments.date}}</td>
                 <td>{{appointments.doctorName}}</td>
                 <td>{{appointments.diagnosis}}</td>
-                <!-- <td>{{appointments.getBmi()}}</td> -->
             </tr>
         </tbody>
-
     </table>

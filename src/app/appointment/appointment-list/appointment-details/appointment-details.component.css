@@ -23,3 +23,7 @@ a.list-group-item.active {
 .diagnosis {
     width: 450px;
 }
+
+.table .thead-dark th {
+    background-color: #2d2929 !important;
+}

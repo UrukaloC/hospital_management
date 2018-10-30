@@ -1,7 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { IsUserAuthenticatedGuard } from './app/security/is-user-authenticated.guard';
 import { PageNotFoundComponent } from './app/page-not-found/page-not-found.component';
 import { LoginComponent } from './app/login/login.component';
 import { SignupComponent } from './app/signup/signup.component';
@@ -15,26 +14,26 @@ import { PatientDetailComponent } from './app/patients/patient-edit-profile/pati
 import { AppointmentComponent } from './app/appointment/appointment.component';
 import { AppointmentEditComponent } from './app/appointment/add-appointment/add-appointment.component';
 import { AppointmentDetailComponent } from './app/appointment/edit-appointment/edit-appointment.component';
-
+import { ProtectedRouteGuard } from './app/security/protected-route-guard.guard';
 
 const Hospital: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
 
-  { path: 'doctor', component: DoctorComponent, children: [
+  { path: 'doctor', component: DoctorComponent, canActivate: [ProtectedRouteGuard], children: [
     { path: 'new', component: DoctorEditComponent },
     { path: ':id', component: DoctorDetailComponent },
     { path: ':id/edit', component: DoctorEditComponent },
   ] },
-  { path: 'homepage', component: HomePage},
+  { path: 'homepage', component: HomePage, canActivate: [ProtectedRouteGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full'},
-  { path: 'patient', component: PatientComponent, children: [
+  { path: 'patient', component: PatientComponent, canActivate: [ProtectedRouteGuard], children: [
     { path: 'new', component: PatientEditComponent },
     { path: ':id', component: PatientDetailComponent },
     { path: ':id/edit', component: PatientEditComponent }
 
   ] },
-  { path: 'appointment', component: AppointmentComponent, children: [
+  { path: 'appointment', component: AppointmentComponent,canActivate: [ProtectedRouteGuard], children: [
     { path: 'new', component: AppointmentEditComponent },
     { path: ':id', component: AppointmentDetailComponent },
     { path: ':id/edit', component: AppointmentEditComponent }

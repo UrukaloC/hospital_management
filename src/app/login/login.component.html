@@ -32,13 +32,17 @@
                         </div>
                         <input id="password" name="password" type="password" class="form-control" placeholder="Password..." [(ngModel)]="password">
                     </div><br>
-                    <p style="text-decoration: underline;">email: demo@demo.com / password: 123456</p>
+                    <p>EMAIL: demo@demo.com / PASSWORD: 123456</p>
                 </div>
                 <!-- Submit -->
                 <div class="form-group col-md-12">
                     <!-- Dodata putanja ka stranici sa detaljima pacijenta -->
                     <button type="submit" class="btn btn-light">Login</button>
                 </div>
+            </div>
+            <div class="link-reg">
+                <a class="route-to-register" routerLink="/signup">
+                    <i class="fas fa-user"> </i>If you don't have an account please click here to signup</a>
             </div>
         </form>
     </div>

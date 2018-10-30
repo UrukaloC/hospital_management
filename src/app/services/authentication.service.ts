@@ -10,6 +10,9 @@ import {Subscription} from 'rxjs/Subscription';
 
 @Injectable()
 export class AuthenticationService {
+    routeProtected(arg0: boolean): boolean | Observable<boolean> | Promise<boolean> {
+        throw new Error("Method not implemented.");
+    }
   isLoggedIn(): any {
     throw new Error("Method not implemented.");
   }

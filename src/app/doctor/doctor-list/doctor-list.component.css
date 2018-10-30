@@ -9,3 +9,9 @@ input.form-control {
 .btn.btn-success:hover {
     background-color: #28624a !important;
 }
+
+.my-pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 91px;
+}

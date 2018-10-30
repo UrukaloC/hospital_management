@@ -19,3 +19,7 @@ p {
 a.list-group-item.active {
     background-color: #54a3f7 !important;
 }
+
+.table .thead-dark th {
+    background-color: #4b4b4b !important;
+}
