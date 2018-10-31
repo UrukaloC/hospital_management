@@ -5,3 +5,13 @@
     background: linear-gradient(45deg, rgba(0, 103, 255, 0.2), rgba(0, 150, 80, 0.5)), url('../../assets/images/error.jpg') center center no-repeat;
     background-size: cover;
 }
+
+.btn.btn-primary.btn-lg {
+    position: absolute;
+    transition: .5s ease;
+    top: 47.5%;
+    left: 60.3%;
+    padding: 7px 27px 7px 27px;
+    background-color: #216d8a;
+    opacity: 0;
+}

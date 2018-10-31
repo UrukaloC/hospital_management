@@ -1,15 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Patient } from '../models/patient.model';
-import { SystemUser } from '../models/user.model';
+import { Appointment } from '../models/appointment';
 
 @Pipe({
-  name: 'sortByDate'
+  name: 'sortByDateAppo'
 })
-export class SortByDatePipe implements PipeTransform {
+export class SortByDatePipeAppointment implements PipeTransform {
 
-  transform(value: SystemUser [],
+  transform(value: Appointment [],
     sortBy: string,
-    ascending?: boolean): SystemUser [] {
+    ascending?: boolean): Appointment [] {
 sortBy = 'creDate';
 value = value.sort(
 (a, b) =>
