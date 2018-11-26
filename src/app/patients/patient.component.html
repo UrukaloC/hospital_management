@@ -19,11 +19,12 @@
                 <div id="wrapper" class="active">
                     <div id="sidebar-wrapper">
                         <ul id="sidebar_menu" class="sidebar-nav">
-                            <li class="sidebar-brand"><a id="menu-toggle" active>Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+                            <li class="sidebar-brand"><a id="menu-toggle">Menu</a></li>
+                            <!-- <li class="sidebar-brand"><a id="menu-toggle" active>Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li> -->
                         </ul>
                         <ul class="sidebar-nav" id="sidebar">
                             <li>
-                                <a class="navbar-brand" routerLink="/homepage">
+                                <a class="navbar-brand" routerLink="/homepage" title="Home Page">
                                     <i class="fas fa-home"></i>
                                 </a>
                             </li>
@@ -43,23 +44,23 @@
                             </li>
 
                             <li>
-                                <a class="navbar-brand" routerLink="/patient">
+                                <a class="navbar-brand" routerLink="/patient" title="Patient">
                                     <i class="fas fa-file-medical"></i>
                                 </a>
                             </li>
                             <li>
-                                <a class="navbar-brand" routerLink="/doctor">
+                                <a class="navbar-brand" routerLink="/doctor" title="Doctor">
                                     <i class="fas fa-user-md"></i>
                                 </a>
                             </li>
                             <!-- link appointment -->
                             <li>
-                                <a class="navbar-brand" routerLink="/appointment">
+                                <a class="navbar-brand" routerLink="/appointment" title="Appointment">
                                     <i class="fas fa-calendar-check"></i>
                                 </a>
                             </li>
                             <li>
-                                <a class="navbar-brand" (click)='backClicked()'><i class="fas fa-angle-double-left"></i></a>
+                                <a class="navbar-brand" (click)='backClicked()' title="Go Back"><i class="fas fa-angle-double-left"></i></a>
                             </li>
 
                         </ul>
@@ -67,13 +68,14 @@
                 </div>
             </div>
             <!-- drugi grid -->
-            <div class="col-sm-12">
+            <div class="col-sm-12"><br>
+                <router-outlet></router-outlet><br>
                 <app-patient-list></app-patient-list>
             </div>
             <!-- treci grid -->
-            <div class="col-sm-6">
-                <router-outlet></router-outlet>
-            </div>
+            <!-- <div class="col-sm-6">
+                <router-outlet></router-outlet><br>
+            </div> -->
         </div>
     </div>
 
