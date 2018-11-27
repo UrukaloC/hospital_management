@@ -7,7 +7,7 @@ import { SystemUser } from '../models/user.model';
 export class SortByDatePipe implements PipeTransform {
 
   transform(value: SystemUser [],
-    sortBy: string,
+    sortBy: any,
     ascending?: boolean): SystemUser [] {
 sortBy = 'creDate';
 value = value.sort(

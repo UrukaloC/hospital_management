@@ -6,6 +6,7 @@
 input.form-control {
     width: 230px;
     margin-top: 4px;
+    box-shadow: 0 1px 4px rgba(57, 73, 76, 0.35);
 }
 
 .btn.btn-success:hover {

@@ -1,7 +1,8 @@
 .btn.btn-primary {
     margin-right: 15px;
     border-radius: 4px !important;
-    background-color: #007bff;
+    background-color: #54a3f7;
+    box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
 }
 
 .wrap {
